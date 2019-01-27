@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const APP_DIR = path.resolve(__dirname, '../src');
+const APP_DIR = path.resolve(__dirname, '../src/App.jsx');
 
 module.exports = env => {
 	const { PLATFORM, VERSION } = env;
@@ -16,7 +16,7 @@ module.exports = env => {
 				module: {
 					rules: [
 						{
-							test: /\.js$/,
+							test: /\.js$|\.jsx$/,
 							exclude: /node_modules/,
 							use: {
 								loader: 'babel-loader'
