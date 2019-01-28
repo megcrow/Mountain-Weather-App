@@ -1,5 +1,5 @@
 // import Footer from './Footer/Footer.jsx';
-import MountainList from './MountainList/MountainList.jsx';
+// import MountainList from './MountainList/MountainList.jsx';
 // import PeakRankList from './PeakRankList/PeakRankList.jsx';
 import WelcomeHeader from './WelcomeHeader/WelcomeHeader.jsx';
 
