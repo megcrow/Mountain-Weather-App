@@ -1,3 +1,6 @@
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+import Popper from 'popper.js';
 // import Footer from './Footer/Footer.jsx';
 // import MountainList from './MountainList/MountainList.jsx';
 // import PeakRankList from './PeakRankList/PeakRankList.jsx';

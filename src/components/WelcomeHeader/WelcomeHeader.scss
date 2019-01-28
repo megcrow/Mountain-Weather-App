@@ -1,19 +1,32 @@
 .header-container {
+    display: flex;
+    flex-direction: column;
     color: white;
-    text-align: center;
     height: 360px;
     background: url("/dist/images/header.png");
     background-size: cover;
     background-position: center center;
-    width: 100%;
-    position: absolute;
+    align-items: center;
+
+padding-top: 10px;
+}
+.header {
+    width:100%;
+    display:flex
 }
 
-.logo {
-    float: left;
-    width: 80px;
-    height:80px;
-    margin:10px;
+.header img {
+    justify-self: left;
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header h1 {
+    margin: auto;
+    margin-bottom: 0;
+    margin-left: 90px;
 }
 
 .title {
@@ -21,25 +34,25 @@
     font-size: 5vw;
     font-stretch: condensed;
     margin: 0;
-    padding-top: 32px; 
-    padding-right: 90px;
 }
 
 .subtitle {
     font-family: HelveticaNeue, "Helvetica Neue";
-    font-size: 2vw;
+    font-size: 2.5vw;
     margin: 0px;
+    justify-self:center;
 }
 
 .learn-more {
-        width: 139px;
-        height: 33px;
+        width: 137px;
+        height: 31px;
         border-radius: 16.5px;
         color: white;
         background-color: #1a5bb2;
         font-size: medium;
         font-weight: bold;
         margin-top: 10px;
-        border-color: white;
         box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+        border: 2px;
+        font-family: "HelveticaNeue", Helvetica;
 }
