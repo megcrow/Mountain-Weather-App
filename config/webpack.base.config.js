@@ -4,7 +4,6 @@ const merge = require("webpack-merge");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const APP_DIR = path.resolve(__dirname, '../src/App.jsx');
 
@@ -48,8 +47,7 @@ module.exports = env => {
 					new webpack.DefinePlugin({ 
 						'process.env.VERSION': JSON.stringify(env.VERSION),
 						'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
-					}),
-					new CopyWebpackPlugin([ { from: 'src/static' } ])
+					})
 				],
 		}
 	])
