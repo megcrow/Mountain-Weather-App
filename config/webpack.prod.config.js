@@ -1,5 +1,6 @@
 /* eslint-disable */
 const merge = require('webpack-merge');
+const path = require('path');
 // Plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -28,7 +29,11 @@ const prodConfiguration = env => {
 				new MiniCssExtractPlugin(),
 				new OptimizeCssAssetsPlugin(),
 				new Visualizer({ filename: './statistics.html' })
-			]
+			],
+			output: {
+				filename: '[name].bundle.js',
+				path: path.resolve(__dirname, '../build')
+			  }
 		}
 	]);
 }
