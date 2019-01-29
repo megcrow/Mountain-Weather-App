@@ -23,7 +23,7 @@ const prodConfiguration = env => {
 				//     }
 				//   }
 				// },
-				minimizer: [new UglifyJsPlugin()]
+				// minimizer: [new UglifyJsPlugin()]
 			},
 			plugins: [
 				new MiniCssExtractPlugin(),
