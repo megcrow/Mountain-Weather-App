@@ -6,12 +6,21 @@ import './WelcomeHeader.scss';
 function WelcomeHeader() {
     return (
        <div className="header-container">
+            <img
+                className="logo"
+                src={logoWhite}
+            /> 
             <div className="header">
-                <img src={logoWhite} /> 
-                <h1 className="title">14ers Weather Conditions</h1>
+                <h1 className="title">
+                    14ers Weather Conditions
+                </h1>
+                <p className="subtitle">
+                    Make the best of your weather window
+                </p>
+            <button className="learn-more">
+                Learn More
+            </button>
             </div>
-            <p className="subtitle">Make the best of your weather window</p>
-            <button className="learn-more">Learn More</button>
        </div>
     );
 }

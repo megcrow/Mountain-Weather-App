@@ -49,6 +49,10 @@ module.exports = env => {
 						'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
 					})
 				],
+				output: {
+					filename: '[name].bundle.js',
+					path: path.resolve(__dirname, '../build/')
+				}
 		}
 	])
 };
