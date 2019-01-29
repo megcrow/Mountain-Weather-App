@@ -8,7 +8,7 @@ import WelcomeHeader from './WelcomeHeader/WelcomeHeader.jsx';
 
 export {
     // Footer,
-    MountainList,
+    // MountainList,
     // PeakRankList,
     WelcomeHeader
 };
