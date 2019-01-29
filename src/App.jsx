@@ -1,12 +1,7 @@
-import React, {
-	Component
-} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-    // Footer,
-    MountainList,
-    // PeakRankList,
     WelcomeHeader
 } from './components';
 
@@ -16,7 +11,6 @@ function App() {
 	return (
 		<div>
 			<WelcomeHeader />
-			<MountainList />
 		</div>
 	);
 }
