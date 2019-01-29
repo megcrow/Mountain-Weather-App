@@ -13,7 +13,7 @@ const routes = require('./routes');
 app.use('/', routes);
 
 /** Get port from environment and store in Express. */
-const port = process.env.PORT || '8080';
+const port = process.env.PORT || '80';
 app.set('port', port);
 
 /** Create HTTP server. */
