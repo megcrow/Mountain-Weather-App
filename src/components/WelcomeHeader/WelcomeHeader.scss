@@ -3,13 +3,13 @@
     flex-direction: column;
     color: white;
     height: 360px;
-    background: url("/dist/images/header.png");
+    background: url("../../static/images/header.png");
     background-size: cover;
     background-position: center center;
     align-items: center;
-
-padding-top: 10px;
+    padding-top: 10px;
 }
+
 .header {
     width:100%;
     display:flex

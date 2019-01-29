@@ -4,9 +4,9 @@ const http = require('http');
 
 const app = express();
 
-// Point static path to dist
-app.use('/', express.static(path.join(__dirname, '..', 'dist')));
-app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
+// Point static path to build
+app.use('/', express.static(path.join(__dirname, '..', 'build')));
+app.use('/build', express.static(path.join(__dirname, '..', 'build')));
 
 const routes = require('./routes');
 
