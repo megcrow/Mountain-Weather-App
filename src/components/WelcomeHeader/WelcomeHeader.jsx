@@ -17,9 +17,6 @@ function WelcomeHeader() {
                 <p className="subtitle">
                     Make the best of your weather window
                 </p>
-            <button className="learn-more">
-                Learn More
-            </button>
             </div>
        </div>
     );
