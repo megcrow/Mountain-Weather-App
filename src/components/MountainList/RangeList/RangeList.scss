@@ -1,0 +1,38 @@
+.range-list-container {
+
+}
+
+.range-list-title {
+    text-align: center;
+    background-color: #ff5c5c;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.range-list-body {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.range-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.peak-name {
+    &:link,
+    &:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: blue;
+    }
+}
+
+.peak-elevation {
+
+}

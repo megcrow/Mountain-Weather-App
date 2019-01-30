@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
+	MountainList,
     WelcomeHeader
 } from './components';
 
@@ -11,6 +12,7 @@ function App() {
 	return (
 		<div>
 			<WelcomeHeader />
+			<MountainList />
 		</div>
 	);
 }
