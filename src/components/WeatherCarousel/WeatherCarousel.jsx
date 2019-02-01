@@ -1,13 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 
 import DailyWeather from './DailyWeather/DailyWeather.jsx';
 import './WeatherCarousel.scss';
 
 function WeatherCarousel() {
 
-	const today = moment().format('MMMM Do');
-	const tomorrow = moment().add(1, 'd').format('MMMM Do');
 
 	function calculateDangerIndex(cloud, windSpeed, snow, rain, tstorm, avy) {
 		const cloudWeight = 0.01 * cloud;
@@ -39,8 +36,6 @@ function WeatherCarousel() {
             percentSnow,
             percentTStorm,
 			rating,
-			today,
-			tomorrow,
 			windSpeed
         }
 	}
@@ -51,11 +46,11 @@ function WeatherCarousel() {
 			<div className="carousel-body">
 					<div className="today-weather">
 						<div className="date-and-weather">
-							<h1 className="date">Today, {today}</h1>
+							<h1 className="date">Today, February 1st</h1>
 							<DailyWeather {...generateConditions()} />
 						</div>
 						<div className="date-and-weather">
-							<h1 className="date">Tomorrow, {tomorrow}</h1>
+							<h1 className="date">Tomorrow, February 2nd</h1>
 							<DailyWeather {...generateConditions()} />
 						</div>
 					</div>
