@@ -1,12 +1,49 @@
-import React from "react";
+import React from 'react';
+import moment from 'moment';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+import DailyWeather from './DailyWeather/DailyWeather.jsx';
 import './WeatherCarousel.scss';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import TodaysWeather from './TodaysWeather/TodaysWeather.jsx'
-import TomorrowsWeather from './TomorrowsWeather/TomorrowsWeather.jsx'
 
 function WeatherCarousel() {
+	function calculateDangerIndex(cloud, windSpeed, snow, rain, tstorm, avy) {
+		const cloudWeight = 0.01 * cloud;
+		const snowWeight = 0.3 * snow;
+		const rainWeight = 0.04 * rain;
+		const tStormWeight = 0.3 * tstorm;
+		const avyWeight = 0.19 * avy;
+		const windWeight = 0.16 * windSpeed;
+		return cloudWeight + windWeight + snowWeight + rainWeight + tStormWeight + avyWeight;
+    }
+
+    function generateConditions() {
+        const percentSnow = Math.random() * 100;
+        const percentRain = Math.random() * 100;
+        const percentTStorm = Math.random() * 100;
+        const windSpeed = Math.floor(Math.random() * 81)
+        const avyDangerList = ['1 - Low', '2 - Moderate', '3 - Considerable', '4 - High', '5 - Extreme'];
+		const avyIndex = Math.floor(Math.random() * 5);
+		const avyDanger = avyDangerList[avyIndex];
+		const cloudCoverList = ['Clear', 'Cloudy', 'Partially Cloudy'];
+		const cloudIndex = Math.floor(Math.random() * 3);
+        const cloudCover = cloudCoverList[cloudIndex];
+        const rating = 100-calculateDangerIndex(cloudIndex, windSpeed, percentSnow, percentRain, percentTStorm, avyIndex).toFixed();
+
+        return {
+            avyDanger,
+            cloudCover,
+            percentRain,
+            percentSnow,
+            percentTStorm,
+            rating,
+            windSpeed
+        }
+	}
+
+	const today = moment().format('MMMM Do');
+	const tomorrow = moment().add(1, 'day')
+
   	return(
 		<div className="carousel-container">
 			<h1 className="carousel-header">Grays Peak</h1>
@@ -14,13 +51,10 @@ function WeatherCarousel() {
 				<Carousel 
 					showThumbs={false}
 					showStatus={false}
-					>
+				>
 					<div className="today-weather">
-						<TodaysWeather />
-						<TodaysWeather />
-					</div>
-					<div className="today-weather">
-
+						<DailyWeather {...generateConditions()} />
+						<DailyWeather {...generateConditions()} />
 					</div>
 				</Carousel>
 			</div>
