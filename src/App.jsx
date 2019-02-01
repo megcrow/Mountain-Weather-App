@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import {
 	MountainList,
-    WelcomeHeader
+	RadarMap,
+	WelcomeHeader,
+	WeatherCarousel
 } from './components';
 
 import './App.scss';
@@ -12,7 +14,13 @@ function App() {
 	return (
 		<div>
 			<WelcomeHeader />
-			<MountainList />
+			<div className="body-container">
+				<MountainList />
+				<div className="main">
+					<WeatherCarousel />
+					<RadarMap />
+				</div>
+			</div>
 		</div>
 	);
 }

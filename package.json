@@ -16,9 +16,13 @@
     "dependencies": {
         "bootstrap": "^4.2.1",
         "jquery": "^3.3.1",
+        "moment": "^2.24.0",
         "popper.js": "^1.14.6",
         "react": "^16.5.2",
-        "react-dom": "^16.5.2"
+        "react-darksky-map": "^0.1.0",
+        "react-dom": "^16.5.2",
+        "react-icons": "^3.3.0",
+        "react-responsive-carousel": "^3.1.46"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0",
