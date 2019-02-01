@@ -16,6 +16,7 @@ import './TodaysWeather.scss'
 
 function TodaysWeather() {
     const today = moment().format('MMMM Do');
+    const tomorrow = moment().add(1, 'day')
 
     return (
        <div className="todays-weather-container">
