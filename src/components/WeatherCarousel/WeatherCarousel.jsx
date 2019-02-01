@@ -1,12 +1,14 @@
 import React from 'react';
 import moment from 'moment';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import DailyWeather from './DailyWeather/DailyWeather.jsx';
 import './WeatherCarousel.scss';
 
 function WeatherCarousel() {
+
+	const today = moment().format('MMMM Do');
+	const tomorrow = moment().add(1, 'd').format('MMMM Do');
+
 	function calculateDangerIndex(cloud, windSpeed, snow, rain, tstorm, avy) {
 		const cloudWeight = 0.01 * cloud;
 		const snowWeight = 0.3 * snow;
@@ -15,7 +17,7 @@ function WeatherCarousel() {
 		const avyWeight = 0.19 * avy;
 		const windWeight = 0.16 * windSpeed;
 		return cloudWeight + windWeight + snowWeight + rainWeight + tStormWeight + avyWeight;
-    }
+	}
 
     function generateConditions() {
         const percentSnow = Math.random() * 100;
@@ -36,27 +38,27 @@ function WeatherCarousel() {
             percentRain,
             percentSnow,
             percentTStorm,
-            rating,
-            windSpeed
+			rating,
+			today,
+			tomorrow,
+			windSpeed
         }
 	}
-
-	const today = moment().format('MMMM Do');
-	const tomorrow = moment().add(1, 'day')
 
   	return(
 		<div className="carousel-container">
 			<h1 className="carousel-header">Grays Peak</h1>
 			<div className="carousel-body">
-				<Carousel 
-					showThumbs={false}
-					showStatus={false}
-				>
 					<div className="today-weather">
-						<DailyWeather {...generateConditions()} />
-						<DailyWeather {...generateConditions()} />
+						<div className="date-and-weather">
+							<h1 className="date">Today, {today}</h1>
+							<DailyWeather {...generateConditions()} />
+						</div>
+						<div className="date-and-weather">
+							<h1 className="date">Tomorrow, {tomorrow}</h1>
+							<DailyWeather {...generateConditions()} />
+						</div>
 					</div>
-				</Carousel>
 			</div>
 		</div>
 	);

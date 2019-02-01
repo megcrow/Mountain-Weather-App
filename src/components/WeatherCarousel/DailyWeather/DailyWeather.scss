@@ -1,24 +1,23 @@
 .today-weather {
     padding-bottom: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .todays-weather-container {
-    padding: 5px;
     color:#4a90e2;
     font-size: medium;
-    padding-bottom: inherit;
-    width: 450px;
+    padding-bottom: 25px;
     border-right: 1px solid #a6aab2;
     border-left: 1px solid #a6aab2;
     border-top: 1px solid #a6aab2;
     border-bottom: 1px solid #a6aab2;
 }
 
-.date {
-    font-size: medium;
-    margin-bottom:10px;
+
+.rating{
+    text-align:center;
+    padding:10px;
 }
 
 .icon-container {
@@ -26,9 +25,8 @@
     grid-template-columns: 165px 165px;
     grid-row-gap: 20px;
     text-align: left;
-    grid-column-gap: 38px;
+    grid-column-gap: 10px;
     margin: auto;
-    width:335px;
 }
 
 .react-icons {

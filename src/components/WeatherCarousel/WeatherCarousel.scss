@@ -1,5 +1,5 @@
 .carousel-container{
-    margin: 20px;
+    margin: 3px;
     margin-left: 0;
  
 }
@@ -12,13 +12,21 @@
     padding: 5.5px;
     font-size: 25px;
     font-weight:lighter;
-    margin-top:0
+    margin-bottom: 0;
 }
 
 .carousel-body {
     margin-right:20px;
     margin-left: 40px;
     margin-top: 10px;
+}
+
+.date {
+    font-size: medium;
+    margin:0;
+    text-align: center;
+    color:#4a90e2;
+    margin-bottom:5px;
 }
 
 .today-weather {
