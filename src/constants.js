@@ -94,11 +94,6 @@ const SANGRE_DE_CRISTO = [
     },
     {
         name: 'Kit Carson Peak',
-        elevation: 14165,
-        url: 'https://www.14ers.com/photos/peakmain.php?peak=Kit+Carson+Peak'
-    },
-    {
-        name: 'Kit Carson Peak',
         elevation: 14081,
         url: 'https://www.14ers.com/photos/peakmain.php?peak=Challenger+Point'
     },
