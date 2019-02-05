@@ -52,8 +52,7 @@ module.exports = env => {
 					new webpack.DefinePlugin({ 
 						'process.env.VERSION': JSON.stringify(env.VERSION),
 						'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
-					}),
-					new webpack.IgnorePlugin(/(locale)/, /node_modules.+(momentjs)/)
+					})
 				],
 				output: {
 					filename: '[name].bundle.js',
