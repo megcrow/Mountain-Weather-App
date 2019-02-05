@@ -48,11 +48,11 @@ function WeatherCarousel(props) {
 			<div className="carousel-body">
 					<div className="today-weather">
 						<div className="date-and-weather">
-							<h1 className="date">Today, February 4th</h1>
+							<h1 className="date">Today, {today}</h1>
 							<DailyWeather {...generateConditions()} />
 						</div>
 						<div className="date-and-weather">
-							<h1 className="date">Tomorrow, February 5th</h1>
+							<h1 className="date">Tomorrow, {tomorrow}</h1>
 							<DailyWeather {...generateConditions()} />
 						</div>
 					</div>
