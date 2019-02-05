@@ -1,6 +1,6 @@
 import React from 'react';
-
 import DarkskyMap from 'react-darksky-map';
+
 import './RadarMap.scss'
  
 function RadarMap () {

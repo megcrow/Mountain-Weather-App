@@ -1,12 +1,12 @@
 import React from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 import DailyWeather from './DailyWeather/DailyWeather.jsx';
 import './WeatherCarousel.scss';
 
 function WeatherCarousel(props) {
-	const today = moment().format('MMMM Do');
-	const tomorrow = moment().add(1, 'd').format('MMMM Do');
+	const today = dayjs().format('MMMM D');
+	const tomorrow = dayjs().add(1, 'd').format('MMMM D');
 
 	function calculateDangerIndex(cloud, windSpeed, snow, rain, tstorm, avy) {
 		const cloudWeight = 0.01 * cloud;
