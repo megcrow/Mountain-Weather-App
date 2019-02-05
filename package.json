@@ -14,8 +14,8 @@
     "author": "Meagan Crowley",
     "license": "ISC",
     "dependencies": {
-        "moment": "^2.24.0",
-        "moment-timezone": "^0.5.23",
+        "moment": "2.18.0",
+        "moment-timezone": "^0.5.13",
         "react": "^16.5.2",
         "react-darksky-map": "^0.1.0",
         "react-dom": "^16.5.2",
