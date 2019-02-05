@@ -4,8 +4,7 @@ import moment from 'moment';
 import DailyWeather from './DailyWeather/DailyWeather.jsx';
 import './WeatherCarousel.scss';
 
-function WeatherCarousel() {
-
+function WeatherCarousel(props) {
 	const today = moment().format('MMMM Do');
 	const tomorrow = moment().add(1, 'd').format('MMMM Do');
 
@@ -45,7 +44,7 @@ function WeatherCarousel() {
 
   	return(
 		<div className="carousel-container">
-			<h1 className="carousel-header">Grays Peak</h1>
+			<h1 className="carousel-header">{props.peakName}</h1>
 			<div className="carousel-body">
 					<div className="today-weather">
 						<div className="date-and-weather">

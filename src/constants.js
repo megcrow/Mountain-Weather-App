@@ -228,7 +228,11 @@ const FRONT = [
     {
         name: 'Grays Peak',
         elevation: 14270,
-        url: 'https://www.14ers.com/photos/peakmain.php?peak=Grays+Peak'
+        url: 'https://www.14ers.com/photos/peakmain.php?peak=Grays+Peak',
+        location: {
+            lat: 39.6336,
+            long: -105.8172
+        }
     },
     {
         name: 'Torreys Peak',
@@ -236,7 +240,7 @@ const FRONT = [
         url: 'https://www.14ers.com/photos/peakmain.php?peak=Torreys+Peak'
     },
     {
-        name: 'Mt Evans',
+        name: 'Mt. Evans',
         elevation: 14264,
         url: 'https://www.14ers.com/photos/peakmain.php?peak=Mt.+Evans'
     },

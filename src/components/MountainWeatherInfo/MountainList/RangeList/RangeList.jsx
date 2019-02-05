@@ -5,7 +5,8 @@ import './RangeList.scss';
 function RangeList(props) {
     const {
         range, 
-        title
+        title,
+        onClick
     } = props
 
     return (
@@ -14,9 +15,13 @@ function RangeList(props) {
             <div className="range-list-body">
                 {range.map((peak, idx) => (
                     <li className="range-list-item" key={idx}>
-                        <a className="peak-name" href={peak.url}>
+                        <span
+                            role="button"
+                            className="peak-name"
+                            onClick={() => onClick(peak.name)}
+                        >
                              {peak.name}
-                        </a>
+                        </span>
                         <span className="peak-elevation">
                             {peak.elevation.toLocaleString()}'
                         </span>

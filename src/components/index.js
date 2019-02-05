@@ -1,11 +1,7 @@
-import MountainList from './MountainList/MountainList.jsx';
-import RadarMap from './RadarMap/RadarMap.jsx'
+import MountainWeatherInfo from './MountainWeatherInfo/MountainWeatherInfo.jsx';
 import WelcomeHeader from './WelcomeHeader/WelcomeHeader.jsx';
-import WeatherCarousel from './WeatherCarousel/WeatherCarousel.jsx';
 
 export {
-    MountainList,
-    RadarMap,
-    WeatherCarousel,
+    MountainWeatherInfo,
     WelcomeHeader
 };
